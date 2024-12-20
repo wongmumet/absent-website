@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sistem Absensi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-green-600">
+    <div class="min-h-screen flex items-center justify-center">
+      <div class="max-w-2xl mx-auto text-center">
+        <!-- Menambahkan logo di sini -->
+        <div class="mb-8">
+          <img
+            src="{{ url_for('static', filename='logo IPNU.png') }}"
+            alt="Logo "
+            class="mx-auto w-24 h-24"
+          />
+        </div>
+        <h1 class="text-4xl font-bold mb-8 text-white">
+          Sistem Absensi IPNU/IPPNU
+        </h1>
+        <div class="flex space-x-6 justify-center">
+          <div class="bg-white p-8 rounded-lg shadow-md w-96">
+            <h2 class="text-xl font-bold mb-4">Login sebagai User</h2>
+            <p class="text-gray-600 mb-6">Untuk anggota IPNU/IPPNU</p>
+            <div class="space-y-4">
+              <a
+                href="{{ url_for('user_login') }}"
+                class="block w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              >
+                Login
+              </a>
+              <a
+                href="{{ url_for('signup') }}"
+                class="block w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+              >
+                Sign Up
+              </a>
+              <a
+                href="{{ url_for('admin_login') }}"
+                class="block w-full bg-purple-500 text-white py-2 px-4 rounded hover:bg-purple-600"
+              >
+                Login Admin
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
